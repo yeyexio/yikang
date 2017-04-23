@@ -1,0 +1,138 @@
+@charset "UTF-8";
+.search{
+    width: 100%;
+    background: #fff;
+    padding: 4px 5px 4px 0px;
+
+}
+.search .sea{
+    width: 70%;
+    height: 35px;
+    border: 1px solid #DDDDDD;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px #DDDDDD;
+    margin: 0 10px 0 10px;
+    font: 12px "微软雅黑";
+    text-indent: 1em;
+    color: #000;
+
+}
+.search  .button{
+    width: 20%;
+    height: 35px;
+    border-radius: 10px;
+    font: 14px "微软雅黑";
+    color:#fff;
+    background: #43B181;
+    box-shadow: 1px 1px 3px #ccc;
+}
+.hang{
+    width: 100%;
+    height: 24px;
+    background: #EBEBEB;
+}
+.hang s{
+    margin: 3px 0 0 10px;
+    font:14px "微软雅黑";
+    color: #999999;
+}
+.bankuai{
+    width: 100%;
+    background: #fff;
+}
+.bankuai ul{
+    padding:10px;
+}
+.bankuai li{
+    border-bottom: 1px solid #E1E1E1;
+}
+/*.bankuai i{*/
+    /*float: left;*/
+/*}*/
+.bankuai img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    display: inline-block;
+    float: left;
+}
+.bankuai li{
+    margin-top: 6px;
+}
+.bankuai .wz{
+    margin: 0 10px 10px 48px;
+    padding-left: 10px;
+    /*float: left;*/
+    /*position: relative;*/
+    /*top:-34px;*/
+}
+.bankuai i{
+    float: left;
+}
+.bankuai em{
+    font:14px "微软雅黑";
+    color: #35424B;
+    display: inline-block;
+}
+.bankuai p{
+    font:14px "微软雅黑";
+    color:#999999;
+    display: inline-block;
+}
+.bankuai .answer{
+    font:10px "微软雅黑";
+    color:#999999;
+    display: inline-block;
+    float: left;
+    margin: 0 10px 10px 10px;
+    /*position: relative;*/
+    /*top: -21px;*/
+    /*left: 54px;*/
+}
+.any{
+    width: 100%;
+    height: 40px;
+    background: #fff;
+}
+.any p{
+    font:16px "微软雅黑";
+    line-height: 32px;
+    color:#44B181;
+    text-align: center;
+    display: block;
+}
+.bankuai2{
+    width: 100%;
+    background: #fff;
+}
+.bankuai2 span{
+    color: #35424B;
+    font:14px "微软雅黑";
+    line-height: 45px;
+    padding-left: 10px;
+}
+.bankuai2 em{
+    font: 10px "微软雅黑";
+    color:#999999;
+    display: inline-block;
+    padding-left: 10px;
+}
+.bankuai2 p {
+    font: 14px "微软雅黑";
+    color: #999999;
+    display: inline-block;
+}
+.bankuai2 ul{
+     padding:0 10px 0 10px;
+}
+.bankuai2 li{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+}
+.bankuai2 .any2 p {
+    font: 16px "微软雅黑";
+    line-height: 45px;
+    color: #44B181;
+    text-align: center;
+    display: block;
+}

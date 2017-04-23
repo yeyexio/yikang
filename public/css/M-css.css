@@ -1,0 +1,255 @@
+/*顶部头像start*/
+.date {
+    height: 185px;
+    padding-top:40px;
+    position: relative;
+    overflow: hidden;
+}
+.date1 {
+    padding-top: 0;
+}
+/*.over {*/
+    /*overflow: hidden;*/
+/*}*/
+.date .date-ewm {
+    position: absolute;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    background: url("../images/sprites.png") -170px 0 no-repeat;
+    background-size: 300px 300px;
+}
+.date .date-more {
+    position: absolute;
+    right: 0;
+    top:55px;
+    width: 26px;
+    height: 28px;
+    background: url("../images/sprites.png") -139px 0 no-repeat;
+    background-size: 300px 300px;
+}
+
+.top-portrait {
+    background-color: #44b181;
+    padding-bottom: 10px ;
+}
+
+.top-portrait div{
+    text-align: center;
+    color: #fff;
+    line-height: 25px;
+}
+.top-portrait span{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: url(../images/timg.jpg) no-repeat center;
+    background-size: 50px 50px;
+
+}
+.top-portrait .swk-head{
+    border-radius: 50%;
+    background: url("../images/timg.jpg") no-repeat;
+    background-size:cover;
+}
+
+.top-portrait .portrait-name{
+    font-size: 2em;
+    font-weight: 500;
+}
+.top-portrait ._portrait-name{
+    font-size: 1.5em;
+    font-weight: 500;
+}
+.top-portrait .type{
+    font-size: 1.8em;
+}
+.top-portrait ._type{
+    font-size: 1.4em;
+}
+.top-portrait .type i{
+    margin: 0 4px 0 8px;
+}
+
+.top-portrait .cont{
+    font-size: 1em;
+}
+
+/*顶部头像end*/
+/*s  内容区域*/
+.main {
+    font-size: 16px;
+    font-weight: 500;
+    color: #35424B;
+}
+.main .problem {
+    margin-top: 10px;
+    background: #fff;
+}
+.main .problem .problem-1,.problem-2 {
+    border-bottom: 1px solid #ccc;
+    padding:0 10px 0 40px;
+    line-height: 50px;
+    position: relative;
+}
+.main .problem .problem-1::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: 18px;
+    width: 20px;
+    height: 29px;
+    background: url("../images/sprites.png") 0 0 no-repeat;
+    -webkit-background-size:200px 200px;
+    background-size:200px 200px;
+}
+
+.main .problem:nth-child(2) .problem-1::before{
+    left: 7px;
+    background: url("../images/sprites.png") -37px 0 no-repeat;
+    -webkit-background-size:200px 200px;
+    background-size:200px 200px;
+}
+.main .problem:nth-child(2) .problem-2::before{
+    left: 10px;
+    background: url("../images/sprites.png") -77px 0 no-repeat;
+    -webkit-background-size:200px 200px;
+    background-size:200px 200px;
+}
+.main .problem .problem-2::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 7px;
+    top: 18px;
+    width: 20px;
+    height: 29px;
+    background: url("../images/sprites.png") -17px 0 no-repeat;
+    -webkit-background-size:200px 200px;
+    background-size:200px 200px;
+}
+.main .problem:nth-child(3) .problem-1::before{
+    left: 10px;
+    width: 17px;
+    background: url("../images/sprites.png") -60px 0 no-repeat;
+    -webkit-background-size:200px 200px;
+    background-size:200px 200px;
+}
+.main .problem span:nth-child(2n) {
+    font-family: SimSun, 宋体;
+    font-size: 1.7em;
+    position: absolute;
+    top: -8px;
+    right: 15px;
+    text-align: center;
+    line-height: 68px;
+    text-decoration: none;
+    font-weight: 900;
+    color: #35424B;
+}
+/*e  内容区域*/
+
+/*------------------------------------------------------------------------------*/
+/*PROBLEMList页面*/
+/*上面的导航*/
+.main-banner {
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 0;
+    padding: 0 20px;
+    width: 100%;
+}
+.main-banner li {
+    float: left;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    font-family: "PingFang SC", "微软雅黑";
+    padding: 10px 0;
+    width: 33.333%;
+}
+
+.main-banner li a {
+    display: block;
+    color: #35424B;
+    position: relative;
+}
+
+.border-right{
+    border-right: 1px solid #e1e1e1;
+}
+
+.main-banner li.show {
+    border-bottom: 2px solid #44b181;
+}
+
+.main-banner li.show a {
+    color: #44b181;
+}
+
+.main-banner li a i {
+    color: #44b181;
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+
+/* ----------  main    ---------*/
+.p-main {
+    width: 100%;
+}
+.p-main .p-swiper {
+    overflow: hidden;
+}
+.p-main .p-banner {
+    height: 180px;
+    background: #456;
+}
+.p-main .p-preblem {
+    margin-top: 10px;
+    height: 120px;
+    background: #fff;
+    padding: 10px;
+}
+.p-main .p-preblem a span:nth-child(1) {
+    display: inline-block;
+    font-size: 16px;
+    height: 44px;
+}
+.p-main .p-preblem .swk {
+    color: #666;
+}
+.p-main .p-preblem .swk-head {
+    position: relative;
+}
+.p-main .p-preblem .swk-head a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: url("../images/timg.jpg") no-repeat;
+    background-size:cover;
+}
+.p-main .p-preblem .swk-head span:nth-of-type(1) {
+    display: inline-block;
+    width: 154px;
+    height: 33px;
+    margin: 0 0 5px 10px;
+    background: url("../images/st.png");
+}
+.p-main .p-preblem .swk-head span:nth-of-type(2) {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    color: #666;
+    padding-left:20px;
+}
+.p-main .p-preblem .swk-head span:nth-of-type(2)::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background: url("../images/erji.png");
+}

@@ -1,0 +1,374 @@
+@charset "utf-8";
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    /*在移动端特殊的设置*/
+    /*清除点击高亮效果*/
+    -webkit-tap-highlight-color: transparent;
+    /*设置所有的盒子的宽度以边框开始计算*/
+    -webkit-box-sizing: border-box;
+    /*要兼容 webkit 浏览器内核厂商 这种情况一般是老的移动端浏览器*/
+    box-sizing: border-box;
+
+}
+
+html, body {
+    height: 100%;
+    background-color: #EBEBEB;
+}
+
+body {
+    font: 14px "PingFang SC", "微软雅黑";
+    color: #333;
+    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif, "\5B8B\4F53";
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #333;
+}
+
+input, textarea {
+    border: none;
+    outline: none;
+    resize: none;
+    /*清除浏览器给input的默认样式*/
+    -webkit-appearance: none;
+}
+
+/*公共类Css*/
+
+/*易康背景色*/
+.yk-color {
+    background: #44b181;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/*清除浮动*/
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+    visibility: hidden;
+    height: 0;
+
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+/*废物利用*/
+s, i, em {
+    display: inline-block;
+    font-style: normal;
+    text-decoration: none;
+}
+
+/*所有使用精灵图的 class  以icon_开始的所有class都有这些属性*/
+[class^="icon-"] {
+
+}
+
+/*顶部和尾部的共用样式*/
+
+.wrap {
+    min-width: 300px;
+    max-width: 640px;
+    /*height: 100%;*/
+    margin: 0 auto ;
+    padding-bottom: 68px;
+}
+
+/*S 顶部*/
+.header {
+    width: 100%;
+}
+
+.currency {
+    width: 100%;
+    /*height: 100px;*/
+    padding: 0 10px;
+    position: relative;
+    font-size: 10px;
+}
+
+.currency .currency-top {
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+}
+
+.currency ul {
+    /*width: 20%;*/
+}
+
+.currency ul li {
+    float: left;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background: #fff;
+    margin-right: 2px;
+    margin-top: 17px;
+}
+
+.currency span {
+    color: #fff;
+}
+
+.currency span:nth-child(2) i {
+    width: 15px;
+    height: 13px;
+    background: url("../images/sprites.png") 0 0 no-repeat;
+    position: absolute;
+    top: 16px;
+    left: 90px;
+}
+
+.currency span:nth-child(3) {
+    position: absolute;
+    left: 50%;
+    margin-left: -20px;
+}
+
+.currency span:nth-child(3) i {
+    width: 12px;
+    height: 12px;
+    background: url("../images/sprites.png") 0 -15px no-repeat;
+}
+
+.currency span:nth-child(4) {
+    position: absolute;
+    right: 0;
+
+}
+
+.currency span:nth-child(4) i:nth-child(1) {
+    width: 9px;
+    height: 12px;
+    margin-right: 5px;
+    background: url("../images/sprites.png") 0 -30px no-repeat;
+}
+
+.currency span:nth-child(4) i:nth-child(2) {
+    width: 20px;
+    height: 10px;
+    margin-left: 5px;
+    background: url("../images/sprites.png") 0 -48px no-repeat;
+}
+
+.currency-back {
+    height: 68px;
+    width: 100%;
+    line-height: 68px;
+    font-size: 1.7em;
+    text-align: center;
+    display: flex;
+}
+
+.currency-back a {
+    color: white;
+    float: left;
+    padding-left: 30px;
+    position: absolute;
+}
+
+.currency-back a span {
+    font-family: SimSun, 宋体;
+    font-size: 1.8em;
+    position: absolute;
+    left: 5px;
+    text-align: center;
+    line-height: 68px;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.currency-back .yk {
+    width: 100%;
+
+}
+
+.currency-back .yk span {
+    width: 100%;
+    text-align: center;
+}
+
+.currency-back .more {
+    position: absolute;
+    right: 0;
+}
+
+.currency-back .more ul {
+    width: 100%;
+    margin: 13px 10px 0 0;
+}
+
+.currency-back .more ul li {
+    float: right;
+    width: 8px;
+    height: 8px;
+    margin-left: 3px;
+}
+
+/*E 顶部*/
+
+
+/*S 底部导航栏*/
+
+.footer-nav {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-nav ul {
+    min-width: 300px;
+    max-width: 640px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    height: 65px;
+    background: #F6F7F9;
+    border-top: 1px solid #E1E1E1;
+}
+
+.footer-nav ul li {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-nav ul li a {
+    color: #B2B3B5;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 90px;
+}
+
+.footer-nav ul li i {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 16px;
+    width: 16px;
+    background: url("../images/sprites.png") 0 -30px no-repeat;
+    background-size: 200px 200px;
+}
+
+.footer-nav ul li:nth-child(2) i {
+    background-position: 0 -50px;
+}
+
+.footer-nav ul li:nth-child(3) i {
+    background-position: 0 -68px;
+}
+
+.footer-nav ul li:nth-child(4) i {
+    background-position: 0 -85px;
+}
+
+/*如果修改最下面固定导航的颜色就给那个li天加(show) 类名*/
+.footer-nav ul li.show a {
+    color: #44b181;
+}
+
+.footer-nav ul li.show i {
+    background-position-x: -20px;
+}
+
+/*E 底部导航栏*/
+.chatroom {
+    max-width: 640px;
+    width: 100%;
+}
+.welcome {
+    text-align: center;
+    font-size:16px;
+    font-family: "microsoft yahei";
+    font-weight: lighter;
+    margin-top: 10px;
+    line-height: 35px;
+}
+.chatviewbox {
+
+}
+.chatview {
+    
+}
+.chatroom input {
+    max-width: 640px;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom:70px;
+    font-size: 18px;
+    font-family:"microsoft yahei";
+    font-weight: lighter;
+    padding:15px;
+    padding:15px;
+    box-shadow: 5px;
+    transition:all 1s;
+}
+.chatroom input:hover {
+    box-shadow:0 0 4px 1px #666;
+    transition:all 1s;
+    transform:translateZ(50px);
+    transform-style: preserve-3d;
+}
+.chatview div {
+    width: 100%;
+    clear: both;
+}
+.chatroom .msg_content {
+    list-style: none;
+    font-size: 16px;
+    font-family:"microsoft yahei";
+    font-weight: lighter;
+    max-width: 40%;
+    background-color: #BFCFFF;
+    border-radius: 5px;
+    word-wrap : break-word;
+    word-break:break-all;
+    margin: 10px 8px;
+    padding:10px 1em ;
+    display:inline-block;
+}
+.msg_lf{
+    float: right;
+    background-color: #c3f1db !important;
+}
+.chatroom .msg_content>b {
+    color:#000000;
+    font-size: 16px;
+    font-family:"microsoft yahei";
+    font-weight: lighter;
+}

@@ -1,0 +1,101 @@
+.wrap {
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 68px;
+    width: 100%;
+}
+.x_search {
+    display: flex;
+    border-bottom: 1px solid #E1E1E1;
+    padding-bottom: 5px;
+    min-width: 320px
+
+}
+
+.x_search input:nth-child(1) {
+    width: 100%;
+    height: 32px;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+    margin: 5px 10px;
+    line-height: 32px;
+    font-size: 10px;
+    padding-left: 10px;
+}
+
+.x_search input:nth-child(2) {
+    width: 60px;
+    height: 32px;
+    margin: 4px;
+    margin-right: 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 32px;
+    color: white;
+}
+
+.x_question {
+    height: 35px;
+    margin: 0 20px;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.x_question > span {
+    font-size: 14px;
+    line-height: 35px;
+    color: #999999;
+}
+
+.x_main {
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.x_main > div {
+
+    margin: 0 10px 0 20px;
+    padding-top: 10px;
+}
+
+.x_main img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.x_main > div > span:nth-child(1) {
+    font-size: 14px;
+    line-height: 28px;
+    color: black;
+}
+
+.x_main > div > span:nth-child(2) {
+    padding: 0 6px;
+    font-size: 5px;
+    color: #999999;
+
+}
+
+.x_main > div > span:nth-child(3) {
+    font-size: 14px;
+    color: #999999;
+
+}
+
+.x_main > div > span:nth-child(5) {
+    font-size: 10px;
+    color: #999999;
+}
+
+.x_main > div > span:nth-child(6) {
+    padding: 0 6px;
+    font-size: 10px;
+    color: #999999;
+
+}
+
+.x_main > div > span:nth-child(7) {
+    font-size: 10px;
+    color: #999999;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>个人主页</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/homepage.css">
+    <link rel="stylesheet" href="css/myregist.css">
+</head>
+<body>
+<!--页面内容-->
+<div class="wrap">
+    <div class="over">
+        <!--顶部-->
+        <header class="header">
+            <!--顶部通用栏-->
+            <div class="yk-color">
+                <!--资料 个人主页-->
+                <div class="date">
+                    <a href="javascript:;" class="date-ewm fl"></a>
+                    <div class="top-portrait">
+                        <!--<div class="portrait"><span></span></div>-->
+                        <!--<div class="portrait-name">Michelle</div>-->
+                        <!--<div class="type">英语教师 <i class=""></i><em>0</em>人收听</div>-->
+                        <!--<div class="cont">“解答相关英语学习问题及语言类学习问题”</div>-->
+                        <% if(!login){ %>
+                        <div class="head">
+                            <div id="headpic"><img src="/head/<%= headpic %>" alt=""/></div>
+                            <p>欢迎你,同学</p>
+                            <a href="/regist">注册</a>
+                            <a href="/login">登录</a>
+                        </div>
+                        <% }else{ %>
+                        <div class="head">
+                            <div id="headpic"><img src="/head/<%= headpic %>" id="head_portrait" alt=""/></div>
+                            <% if(havepic) { %>
+                            <p><%= username %> </p>
+                            <p>"<%= profession %>"</p>
+                            <% }else { %>
+                            <p>欢迎 <%= username %> </p>
+                            <form action="/dohead" method="post" enctype="multipart/form-data">
+                                <span id="doheadT">设置头像</span>
+                                <input type="file" class="form-control" id="checkpic" name="headpic">
+                                <button type="submit" id="lopic" class="btn btn-default" disabled="disabled">上传</button>
+                            </form>
+
+                            <script type="text/javascript">
+                                window.onload = function(){
+                                    var checkpic = document.querySelector("#checkpic");
+                                    var lopic = document.querySelector("#lopic");
+                                    checkpic.onchange = function () {
+                                        lopic.disabled = false;
+                                        if (this.files[0].size > 122000) {
+                                            lopic.disabled = true;
+                                        }
+                                    }
+                                }
+                            </script>
+                            <% } %>
+                        </div>
+                        <% } %>
+                    </div>
+                    <a href="javascript:;" class="date-more fr"></a>
+                </div>
+            </div>
+        </header>
+        <!--内容区域-->
+        <main>
+            <div class="main">
+                <div class="problem">
+                    <div class="problem-1">
+                        <a href="javascript:;">
+                            <span>我的优问</span>
+                            <span>&gt;</span>
+                        </a>
+                    </div>
+                    <div class="problem-2">
+                        <a href="/myquestion">
+                            <span>我的提问</span>
+                            <span>&gt;</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="problem">
+                    <div class="problem-1">
+                        <a href="javascript:;">
+                            <span>我的回答</span>
+                            <span>&gt;</span>
+                        </a>
+                    </div>
+                    <div class="problem-2">
+                        <a href="javascript:;">
+                            <span>热门问题</span>
+                            <span>&gt;</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="problem">
+                    <div class="problem-1">
+                        <a href="javascript:;">
+                            <span>关于我</span>
+                            <span>&gt;</span>
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!--底部导航栏-->
+    <div class="footer-nav">
+        <ul class='clearfix'>
+            <li ><a href="#"><i></i>榜单</a></li>
+            <li><a href="#"><i></i>收听</a></li>
+            <li><a href="/chat"><i></i>发现</a></li>
+            <li class="show"><a href="/myspace"><i></i>我的</a></li>
+        </ul>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+/*导航栏*/
+.yk_nav {
+    width: 100%;
+    border-top:1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    background: #FFFFFF;
+}
+.yk_nav ul {
+    width: 100%;
+}
+.yk_nav ul li:nth-child(-n+2) {
+    width: 30%;
+    float: left;
+}
+.yk_nav ul li:last-child {
+    width: 40%;
+    float: left;
+    padding-right: 10%;
+    position: relative;
+}
+.yk_nav ul li:last-child::after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background: url("../images/sousuo.png") no-repeat center;
+    background-size: 20px 20px;
+}
+.yk_nav ul li a {
+    width: 100%;
+    display: block;
+    font-size: 16px;
+    margin: 12px 0;
+    text-align: center;
+}
+.yk_nav ul li.action {
+    border-bottom: 2px solid #44b181;
+}
+.yk_nav ul li:nth-child(2) a{
+    border-left: 1px solid #44b181;
+    border-right: 1px solid #44b181;
+}
+/*主题内容*/
+.yk_content {
+    width: 100%;
+    padding-bottom: 65px;
+}
+.yk_content_tit {
+    padding: 0 10px;
+    line-height: 30px;
+    border-bottom: 1px solid #cccccc;
+    background: #FFFFFF;
+    font-size: 13px;
+}
+.yk_content_tit a {
+    font-size: 12px;
+    color: #44b181;
+}
+.yk_content_con {
+    width: 100%;
+}
+.yk_content_con .yk_trouble_box {
+    height: 70px;
+    width: 100%;
+    padding: 12px 10px;
+    border-bottom: 1px solid #cccccc;
+    background: #FFFFFF;
+    position: relative;
+}
+.yk_trouble_box .icon_box {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url("../images/girl.png");
+    background-size: 50px 50px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.yk_trouble_box .info_box {
+    width: 100%;
+    padding-left: 60px;
+    overflow: hidden;
+}
+.yk_trouble_box .info_box .info {
+    font-size: 12px;
+    color: #cccccc;
+    margin-top: 12px;
+    position: relative;
+    padding-left: 15px;
+}
+.yk_trouble_box .info_box .info a{
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: url("../images/dibu_icon.png") no-repeat center;
+    background-size: 12px 12px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+}
+.yk_trouble .yk_key_box {
+    background: #FFFFFF;
+    color: #666666;
+    padding: 10px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    display: none;
+}
+.yk_trouble .yk_key_box .news {
+    font-size: 10px;
+    margin-top: 5px;
+    color: #cccccc;
+}
+.yk_trouble .yk_key_box .news span {
+    padding-right: 10px;
+}

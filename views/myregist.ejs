@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>易康问答</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/myregist.css">
+    <script src="js/my.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <!--顶部-->
+    <header class="header">
+        <!--顶部通用栏-->
+        <div class="currency yk-color">
+            <div class="currency-back">
+                <a href="#" class="fl"><span>&lt;</span>返回</a>
+                <div class="yk fl"><span class="">易康问答</span></div>
+                <div class="more">
+                    <ul class="fr">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--顶部搜索栏-->
+    <div class="top-search"></div>
+    <main class="ymain">
+        <div class="container">
+            <!-- Example row of columns -->
+            <div class="row col-lg-6">
+                <h1 id = "registT">欢迎注册</h1>
+
+                <form id="registForm">
+                    <div class="form-group">
+                        <label for="username">用户名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="请设置三位以上有效用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码:</label>
+                        <input type="password" class="form-control" id="password" placeholder="请设置六位以上有效密码">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">重复密码:</label>
+                        <input type="password" class="form-control" id="passwordB" placeholder="请确认两次密码输入一致">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">职业:</label>
+                        <input type="text" class="form-control" id="profession" placeholder="请输入职业">
+                    </div>
+                    <button type="button" id="regist" class="btn btn-default" >注册</button>
+                </form>
+                <div class="registcheck">
+                    <div class="alert alert-success" role="alert" id="successalert">
+                        注册成功
+                    </div>
+                    <div class="alert alert-danger" role="alert" id="erralert">
+                        用户名被占用，请更换
+                    </div>
+                    <div class="alert alert-danger" role="alert" id="erralert2">
+                        两次密码输入不一致
+                    </div>
+                    <div class="alert alert-danger" role="alert" id="erralert3">
+                        请设置三位以上有效用户名
+                    </div>
+                    <div class="alert alert-danger" role="alert" id="erralert4">
+                        请设置六位以上有效密码
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--底部导航栏-->
+    <footer class="footer">
+        <div class="footer-nav">
+            <ul class='clearfix'>
+                <li><a href="#"><i></i>榜单</a></li>
+                <li><a href="#"><i></i>收听</a></li>
+                <li><a href="#"><i></i>发现</a></li>
+                <li><a href="#"><i></i>我的</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="/js/jquery-1.12.2.min.js"></script>
+    <script src="/js/myregist.js"></script>
+</div>
+</body>
+</html>

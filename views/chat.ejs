@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0">
+  <title>易康问答</title>
+  <link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+<!--页面内容-->
+<div class="wrap">
+  <!--顶部-->
+  <header class="header">
+    <!--顶部通用栏-->
+    <div class="currency yk-color">
+      <div class="currency-back">
+        <a href="#" class="fl"><span>&lt;</span>返回</a>
+        <div class="yk fl"><span id="chatT">问一问</span></div>
+        <div class="more">
+          <ul class="fr">
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--顶部搜索栏-->
+
+  <!--内容区域-->
+  <div id="chat">
+      <div id="chatbox">
+        <div class="welcome">
+          <h1>欢迎：<span class="msgusername"><%=username%></span></h1>
+
+        </div>
+        <div class="chatroom">
+          <div class="chatview"></div>
+        </div>
+      </div>
+  </div>
+  <input type="text" id="send" placeholder="请按回车发送消息"/>
+
+
+
+  <!--底部导航栏-->
+  <div class="footer-nav">
+    <ul class='clearfix'>
+      <li><a href="#"><i></i>榜单</a></li>
+      <li><a href="#"><i></i>收听</a></li>
+      <li  class="show"><a href="/chat"><i></i>发现</a></li>
+      <li><a href="/myspace"><i></i>我的</a></li>
+
+    </ul>
+  </div>
+</div>
+
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
+
+<script type="text/javascript">
+  var socket = io();
+  var msg_content =  "";
+  var msgusername = $(".msgusername").html();
+  var step = "";
+  var chatH = $("#chat").height();
+  var chatboxH = $("#chatbox").height();
+  var headpic = "<%=headpic%>"
+  $("#send").keydown(function(e){
+    if(e.keyCode == 13){
+      msg_content = $("#send").val();
+      if(msg_content == ""){
+        this.placeholder = "输入不能为空";
+        return;
+      }
+      socket.emit("msg",{
+        "content" : msg_content,
+        "username" :msgusername,
+        "headpic": headpic
+      });
+      $(this).val("");
+      this.placeholder = "请按回车发送消息";
+    }
+  });
+
+  socket.on("msg",function(msg){
+      if(msg.username == msgusername){
+        var content = $("<p>"+msg.content+"</p>").text()
+        $(".chatview").append("<div class='clearfix my_msgbox'><p class = 'msg_content msg_lf'><b>" + msg.username + "：</b>"+ content+ "</p>  <img id = 'myCp' src='/head/"+msg.headpic+"' /></div>")
+        chatboxH = $("#chatbox").height();
+      }
+    else{
+        var content = $("<p>"+msg.content+"</p>").text()
+      $(".chatview").append("<div><p class = 'clearfix msg_content other_msg'><b>" + msg.username + "：</b>"+ content+ "</p> <img id= 'otherCp' src='/head/"+msg.headpic+"' /> </div>");
+        chatboxH = $("#chatbox").height();
+    };
+
+    if(chatboxH > chatH){
+    $("#chat").scrollTop( $("#chatbox").height());
+   }
+  });
+</script>
+</body>
+</html>

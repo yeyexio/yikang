@@ -1,0 +1,100 @@
+.wrap {
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 68px;
+    width: 100%;
+}
+.x_search {
+    display: flex;
+    border-bottom: 1px solid #E1E1E1;
+    min-width: 320px;
+}
+
+.x_search>a{
+    text-align: center;
+    font:14px/45px "PingFang SC" ;
+    margin: 0 auto ;
+    color: #35424B;
+;
+}
+.x_search a:nth-child(1):hover{
+    color:#44b181;
+    border-bottom: 2px solid #44b181;
+}
+.x_search a:nth-child(2):hover{
+    color:#44b181;
+    border-bottom: 2px solid #44b181;
+}
+
+.x_search>a:nth-child(1){
+    width: 50%;
+    border-right: 1px solid  #E1E1E1;
+    border-bottom: 2px solid #44b181;
+
+
+
+}
+.x_search>a:nth-child(2){
+    width: 50%;
+    border-right: 1px solid  #E1E1E1;
+
+}
+.x_search>a:nth-child(3){
+    margin: 14px;
+    width: 17px;
+    height: 17px;
+    background: url("../images/x_search.png")  17px 17px;
+    background-size: cover;
+ }
+main{
+    /*padding:0 10px;*/
+}
+main>div{
+    padding:0 10px;
+
+    padding-right: 5%;
+    border-bottom:  1px solid  #E1E1E1;
+    margin-bottom: 10px;
+    background-color: whitesmoke;
+}
+main div h3{
+    font: 16px/24px "PingFang SC";
+    color: #35424B;
+    margin: 5px 0;
+}
+main div span{
+    font: 12px/20px "PingFang SC", "Microsoft Yahei";
+    color: #999999;
+}
+main div .listContent{
+    padding-top: 20px;
+    vertical-align: middle;
+}
+main div .listContent>img{
+     width: 40px;
+     height: 40px;
+    border-radius: 20px;
+ }
+ main div .listContent>span:nth-child(2){
+     padding: 6px 50px 6px 20px;
+     background: url("../images/x_voicebg.png") no-repeat center;
+     background-size: 140px 32px ;
+     font: 14px/32px "PingFang SC";
+     color: white;
+ }
+main div .listContent span img{
+    padding-top: 8px;
+   margin-right: 5px;
+    width: 10px;
+    height: 20px;
+}
+main div .listContent div{
+    margin-top:16px ;
+}
+main div .listContent i{
+    width: 16px;
+    height: 15px;
+    background:url("../images/x_sprites.png") no-repeat 0 -50px;
+    background-clip: content-box;
+    margin-right: 5px;
+}

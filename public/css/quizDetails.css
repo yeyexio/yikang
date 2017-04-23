@@ -1,0 +1,265 @@
+@charset "utf-8";
+body {
+    height: auto;
+    background-color: #fff;
+}
+/*顶部头像start*/
+.top-portrait {
+    background-color: #44b181;
+    padding-bottom: 10px ;
+}
+
+.top-portrait div{
+    text-align: center;
+    color: #fff;
+    line-height: 6vw;
+}
+.top-portrait span{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url(../images/Lportrait1.png) no-repeat center;
+    background-size: 50px 50px;
+
+}
+.top-portrait .portrait-name{
+    font-size: 4vw;
+    font-weight: 800;
+}
+.top-portrait .type{
+    font-size: 4vw;
+}
+.top-portrait .type i{
+    margin: 0 4px 0 8px;
+}
+
+.top-portrait .cont{
+    font-size: 3vw;
+}
+
+/*顶部头像end*/
+
+
+/*内容区域*/
+main {
+    color: #999;
+    padding: 0 20px;
+    overflow:auto !important;
+    height: 431px;
+    width: 103%;
+}
+.main-top-cont {
+    height: 11vw;
+    line-height: 11vw;
+    font-size: 15px;
+}
+.main-top-cont .fr {
+    color: #e94c37;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+main form textarea{
+    width: 100%;
+    border-radius: 5px;
+    height: 68px;
+    padding: 3px 5px;
+    border: 1px solid rgb(221,221,221);
+}
+
+
+main .text-num {
+    position: relative;
+    top: -30px;
+    right: 8px
+}
+.Main-Checked {
+    position: relative;
+}
+
+.Main-Checked a {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #44b181;
+    border-radius: 5px;
+    top: 2px;
+    text-align: center;
+}
+.Main-Checked a::before {
+    font-size: 12px;
+    color: #fff;
+}
+
+.Main-Checked span{
+    font-size: 12px;
+    letter-spacing:-1px;
+    padding-left: 17px;
+}
+main input{
+    width: 24%;
+    height: 37px;
+    border-radius: 6px;
+    background-color: #44b181;
+    color: white;
+    font-size: 4vw;
+    font-weight: 500;
+    margin: 15px auto 15px;
+    display: block;
+}
+
+.main-cccBox {
+    background-color: rgb(235,235,235);
+    margin: 0 -20px 0;
+    padding: 0 20px;
+    line-height: 10vw;
+}
+.main-cccBox span {
+    padding: 0 5px;
+}
+
+.main-cccBox span:nth-child(2){
+    color: #44b181;
+    border-left: 1px solid #999999;
+}
+.main-portrait {
+    width: 34px;
+    height: 34px;
+    background: url(../images/Lportrait2.png) no-repeat center;
+    background-size: 34px 34px;
+    margin: 4vw 3vw 0 0;
+}
+
+.main-bottom-cont {
+    overflow: hidden;
+    /*border:1px solid #c0c0c0;*/
+    padding:15px;
+    margin-bottom: 8px;
+    box-shadow: 2px 2px 2px  #ccc;
+}
+
+.main-bottom-cont h5 {
+    color: #666;
+    margin-bottom: 0;
+    margin-top:0;
+    font:18px "microsoft yahei";
+    font-weight: lighter;
+    word-wrap : break-word;
+    word-break:break-all;
+    padding:10px 0;
+}
+.main-bottom-cont i {
+    font-size: 10px;
+}
+.main-bottom-cont .messageRed{
+    text-align: right;
+    padding-right: 60px;
+}
+.main-bottom-cont  span{
+    padding: 0 0px ;
+    font:10px "microsoft yahei";
+    color:#c7254e;
+    font-weight: lighter;
+
+}
+
+.main-bottom-cont  span:nth-of-type(1) {
+}
+.main-bottom-cont  span:nth-of-type(2){
+}
+.messagebox {
+    width: 80%;
+    margin-left: 5%;
+
+}
+.headpicSbox {
+    width: 10%;
+    text-align: center;
+}
+.wrap {
+    background-color: #fff;
+}
+
+
+.head {
+    background-color:#44b181;
+    width: 100%;
+    text-align: center;
+    margin-top: -1px;
+}
+.head>p {
+    text-align: center;
+    margin:0;
+    color:#fff;
+}
+#headpic {
+    width: 80px;
+    height: 80px;
+    margin:0 auto;
+    border:1px solid #e0e0e0;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#headpic img {
+    width: 100%;
+    height: 100%;
+}
+
+#myQ {
+    margin-top: 10px;
+}
+
+#smallhead{
+    width: 100%;
+    height: 30px;
+    float: left;
+    margin-right:10px;
+}
+
+/*
+问题版设置
+*/
+
+.messageModle {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+a{text-decoration: none !important}
+.submitSuccess{
+    margin-top: 50px;
+}
+.deletex{
+    width: 18%;
+    height: 24px;
+    border-radius: 5px;
+    background-color: rgba(29, 177, 222, 0.58);
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 15px auto 15px;
+    display: block;
+    margin: 0;
+    float: right;
+    border: none;
+    outline: none;
+}
+#smallhead {
+    border-radius: 50%;
+}
+
+#messageTitle {
+    width: 100%;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 3px 5px;
+    border: 1px solid rgb(221,221,221);
+    color:#666;
+    font:14px "microsoft yahei";
+    margin:3px 0;
+}
+#title{
+    margin: 0;
+    padding: 0;
+    font:18px "simsun";
+    color:#666;
+}

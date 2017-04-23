@@ -1,0 +1,83 @@
+@charset "utf-8";
+/*上面的导航*/
+.main-banner {
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 0;
+    padding: 0 20px;
+}
+.main-banner li {
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    font-family: "PingFang SC", "微软雅黑";
+    padding: 10px 0;
+}
+
+.main-banner li a {
+    display: block;
+    color: #35424B;
+    position: relative;
+}
+
+.border-right{
+    border-right: 1px solid #e1e1e1;
+}
+
+.main-banner li.show {
+    border-bottom: 2px solid #44b181;
+}
+
+.main-banner li.show a {
+    color: #44b181;
+}
+
+.main-banner li a i {
+    color: #44b181;
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+
+/*内容区域*/
+main {
+    background-color: #ebebeb;
+}
+
+main ul> li {
+    padding: 10px 20px;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+main ul> li .color999 {
+    color: #999;
+    font-size: 17px;
+}
+main ul> li .color333 {
+    color: #333;
+    font-size: 20px;
+}
+
+main .user-img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 15px 15px 0 0 ;
+    background: url(../images/Luser-img.png) no-repeat ;
+    background-size: 50px 50px;
+}
+
+main .cont {
+    overflow: hidden;
+}
+
+main .listenInButton {
+    display: block;
+    width: 70px;
+    height: 25px;
+    border: 2px solid #44b181;
+    color: #44b181;
+    border-radius: 5px;
+}
+
+

@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+/*顶部搜索栏start*/
+.top-search {
+    height: 10%;
+    background-color: #fff;
+}
+
+.top-search form {
+    height: 100%;
+    padding: 8px 20px;
+}
+
+.top-search form input[type="search"] {
+    height: 100%;
+    width: 77%;
+    border: 1px solid rgb(221,221,221);
+    float: left;
+    border-radius: 6px;
+    text-indent: 1vw;
+    font-size: 3vw;
+}
+
+.top-search form input[type="button"] {
+    height: 100%;
+    width: 20%;
+    float: right;
+    border-radius: 6px;
+    font-size: 3vw;
+    color: #fff;
+    background-color: #44b181;
+}
+
+
+/*顶部搜索栏end*/

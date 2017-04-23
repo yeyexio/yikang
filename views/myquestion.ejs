@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>易康问答</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/quizDetails.css">
+    <script type="text/javascript" src="js/template.js"></script>
+</head>
+<body>
+<!--页面内容-->
+<div class="wrap">
+    <!--顶部-->
+    <header class="header">
+        <!--顶部通用栏-->
+        <div class="currency yk-color">
+            <div class="currency-back">
+                <a href="/myspace" class="fl"><span>&lt;</span>返回</a>
+                <div class="yk fl"><span class="">我的提问</span></div>
+                <div class="more">
+                    <ul class="fr">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="head">
+        <div id="headpic"><img src="/head/<%= headpic %>" id="head_portrait" alt=""/></div>
+        <p id="username"> <%= username %> </p>
+        <span id="profession" style = "display:none"><%= profession%></span>
+    </div>
+
+    <!--内容区域-->
+    <main>
+
+        <form action="" method="post" id= "myQ">
+            <input type="text" placeholder="标题" id= "messageTitle"/>
+            <textarea placeholder="请输入提问内容" id="message"></textarea>
+            <div class="text-num fr"><span>0</span>/60</div>
+            <div class="Main-Checked"><a href="#" class="glyphicon glyphicon-ok"></a><span>答案被公开，答案每被偷偷听一次，你从中分成0.5</span></div>
+            <input type="button" value="提问" id="present">
+        </form>
+
+        <div class="main-bottomBox">
+        </div>
+    </main>
+    <!--底部导航栏-->
+    <!--<footer class="footer">-->
+
+    <!--</footer>-->
+
+    <div class="footer-nav">
+        <ul class='clearfix'>
+            <li ><a href="#"><i></i>榜单</a></li>
+            <li><a href="#"><i></i>收听</a></li>
+            <li><a href="#"><i></i>发现</a></li>
+            <li class="show"><a href="#"><i></i>我的</a></li>
+        </ul>
+    </div>
+</div>
+<script>
+    window.onload  = function () {
+        document.querySelector("main textarea").onkeyup=function ()
+        {
+            var maxChars = 60;//最多字符数
+            this.value = this.value.substring(0, maxChars);
+            document.querySelector("main .text-num span").innerHTML = this.value.length.toString();
+
+        }
+    };
+
+
+</script>
+
+<!--为什么不可以在双引号里面直接用前段的模板标记,而要使用后端的模板-->
+<script type="text/html" id="messageModle">
+    <div class="main-bottom-cont">
+       <div class="headpicSbox fl">
+           <img src="/head/<%= headpic %>" alt="" id="smallhead"/>
+
+       </div>
+       <div class="messagebox fl">
+           <h3 id="title">{{= title}}</h3>
+
+             <h5>{{= message  }}</h5>
+          <div class="messageRed"> <span>{{= username }}</span>
+              <span>|"<%= profession %>"</span></div>
+            <i>{{=time}}</i>
+            <button class="deletex" id={{=id}}>删除</button>
+        </div>
+     </div>
+</script>
+<script src="js/jquery-1.12.2.min.js"></script>
+<script>
+    $(function(){
+        // 第一次请求,获取留言表
+        getMessage()
+        function getMessage(){
+
+            $.get("/initial",function(result){
+                console.log(result);
+                $(".main-bottomBox").html("");
+                for(var i = 0;i<result.result.length;i++){
+                    var username = result.result[i].mesname;
+                    var message = result.result[i].message;
+                    var time = result.result[i].time;
+                    var id = result.result[i]._id;
+                    var title = result.result[i].title;
+                    var html = template("messageModle",{username:username,headpic:headpic,message:message,time:time,id:id,title:title});
+                    $(".main-bottomBox").append($(html));
+                }
+                //有异步影响
+                $(".deletex").click(function(){
+                    $(this).parent().parent().remove();
+                    $.get("/delete?id="+this.id,function(result){
+                    })
+                })
+            })
+        }
+
+        //  发送数据给数据库 保存
+
+        $("#present").click(function(){
+            if($("#message").val() != "" && $("#message").val()!='' && $("#messageTitle").val()!=""){
+                $.post("/present",{
+                    "username":$("#username").html(),
+                    "message":$("#message").val(),
+                    "title":$("#messageTitle").val(),
+                    "profession":$("#profession").html()
+                },function(result){
+                    if(result.result == 1){
+                        console.log("接受到数据")
+                        $("#message").val('');
+                        $("#messageTitle").val("");
+                        getMessage();
+                    }else if(result.result == -1){
+                    }
+                })
+            }else{
+                $("#message")[0].placeholder = "输入不能为空";
+            }
+        })
+    })
+
+</script>
+
+</body>
+</html>

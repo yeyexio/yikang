@@ -1,0 +1,42 @@
+/*内容*/
+main {
+    /*height: 100%;*/
+}
+.nurse{
+    width: 114px;
+    height: 114px;
+    border-radius: 10px;
+
+    /*background-color: #44b181;*/
+    background: url(../images/nurse.jpg) no-repeat;
+    background-size:114px 114px;
+    margin: 100px auto;
+
+}
+
+/*文字区域*/
+.z_write{
+    position: relative;
+}
+.z_write p{
+
+    position: relative;
+
+    /*border-bottom: 1px solid #B2B3B5;*/
+}
+
+.z_write p:first-child a{
+    padding-top: 35%;
+    /*border-bottom: 1px solid #B2B3B5;*/
+}
+
+.z_write p:last-child a{
+    padding-top:50%;
+}
+.z_write p a{
+    display: inline-block;
+    position: absolute;
+    font-size: 28vm;
+    font-weight: 400;
+    left: 5%;
+}

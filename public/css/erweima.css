@@ -1,0 +1,94 @@
+@charset "UTF-8";
+.wrap{
+        padding-bottom:0;
+}
+.box{
+    width: 85%;
+    height: 70%;
+    background-color: #fff;
+    border-radius: 10px 10px;
+    position: relative;
+    margin: 27px  auto 100px;
+}
+.box .content{
+    width: 100%;
+    /*height: 100%;*/
+    background-color: #fff;
+    border-radius:10px  10px;
+    position: relative;
+
+}
+.box .content .box2{
+    width:100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 1px 0 7px 0;
+}
+
+
+.box .content  .box2 > img {
+    width: 70%;
+    margin: 45px auto 0;
+    display:block;
+}
+.box .content .box2 .sBox{
+    width: 70%;
+    margin: 20px auto 0;
+}
+.box .content .box2 .sBox em{
+    width: 50px;
+    height: 50px;
+    display: block;
+    /*position: relative;*/
+    background: url(../images/002.jpg) no-repeat;
+    border-radius: 50%;
+    background-size: 50px 50px;
+
+}
+
+.box .content .box2 .sBox em img{
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    top: -65px;
+    left: 31px;
+}
+.box .content .box2 .sBox .wz {
+    /*display: inline-block;*/
+    overflow: hidden;
+    padding: 5px;
+}
+
+
+.box .content .box2 .wz p{
+    font:900 20px "microsoft yahei [Regular] ";
+    color: #333;
+    display: block;
+    /*position: absolute;*/
+    /*bottom:40px;*/
+    /*left:57px;*/
+}
+.box .content .box2 s{
+    font:11px "microsoft yahei [Regular] ";
+    color: #999;
+    display: block;
+    /*position: absolute;*/
+    /*bottom:14px;*/
+    /*left:57px;*/
+}
+
+@keyframes stepAnimation {
+   0%{
+       opacity: 0;
+    }
+    100%{
+        opacity: 1;
+
+    }
+}
+.animation {
+    animation: stepAnimation 1.5s  linear;
+
+}

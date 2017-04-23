@@ -1,0 +1,159 @@
+@charset "UTF-8";
+.wrap{
+    padding-bottom: 0;
+}
+.currency{
+    height: 139px;
+}
+
+img{
+    width: 56px;
+    height: 56px;
+    position: relative;
+    top: 58px;
+    left: -93px;
+}
+.yk p{
+    position: relative;
+    top: 27px;
+    color: #fff;
+    font-size: 14px;
+}
+.top{
+    width: 100%;
+    background: #fff;
+}
+.top .renzheng{
+    /*width: 98%;*/
+    height: 40px;
+    margin-left:10px;
+    margin-right:10px;
+    /*background: pink;*/
+    position: relative;
+    border-bottom: 1px solid #E1E1E1;
+}
+.top .renzheng .rz{
+    width: 20px;
+    height: 13px;
+    display: block;
+    position: absolute;
+    top: 17px;
+    left: 9px;
+
+}
+.top .renzheng i{
+    font: 900 14px "微软雅黑";
+    display: inline-block;
+    position: absolute;
+    top: 11px;
+    left: 37px;
+}
+.bottom{
+    height: 50%;
+    background: #fff;
+    margin-bottom:16px;
+    position: relative;
+}
+.bottom textarea{
+    font:14px "微软雅黑";
+    color:#B2B2B2;
+    /*text-indent: 1em;*/
+    width: 100%;
+
+}
+.bottom  s{
+    font: 14px "微软雅黑";
+    color: #999999;
+}
+.box{
+    min-width: 300px;
+    max-width: 640px;
+}
+.one{
+    width: 100%;
+    font: 900 14px "微软雅黑";
+    line-height: 40px;
+    background: #fff;
+    text-indent: 1em;
+    border-bottom: 1px solid #E1E1E1;
+    color: #35424B;
+}
+.one i{
+    display: inline-block;
+
+    /*padding-right: 300px;*/
+
+}
+.one i:last-child{
+    /*text-indent: 2.5em;*/
+    /*padding-bottom: 10px;*/
+}
+.one .text{
+    width: 63px;
+    height: 24px;
+    border: 2px solid #44B181;
+    border-radius: 5px;
+    text-indent: 2em;
+}
+.one s {
+    font:900 14px "微软雅黑";
+    padding-left: 2px;
+}
+.text_num em {
+    font: 14px "微软雅黑";
+    color: #999999;
+    /*float: right;*/
+}
+.text_numA em {
+    font: 14px "微软雅黑";
+    color: #999999;
+
+}
+.text_numA{
+    float: right;
+    z-index: 10;
+    position: relative;
+    bottom: 20px;
+}
+.one p{
+    display: block;
+    float: right;
+    padding-right: 10px;
+}
+form{
+    padding:5px 10px 5px 24px;
+}
+.text_num {
+    z-index: 10;
+    position: relative;
+    bottom: 20px;
+}
+.one .track span{
+    width: 50px;
+    height: 28px;
+    border-radius: 16px;
+    background: #44b181;
+    display: block;
+    float: right;
+    position: relative;
+    bottom: 33px;
+    right:20px;
+}
+.one .track span p{
+    width: 30px;
+    height: 28px;
+    border-radius:50px;
+    background: #fffefe;
+    display: block;
+    float: right;
+    position: relative;
+    /*bottom: 38px;*/
+    /*right:20px;*/
+    z-index: 12;
+    box-shadow:-2px 1px #ccc ;
+    transition: all 1s;
+}
+.one .track span p:hover{
+    right:20px;
+    box-shadow:1px 1px #ccc ;
+}

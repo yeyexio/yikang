@@ -1,0 +1,110 @@
+.wrap {
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 68px;
+    width: 100%;
+}
+.x_search {
+    display: flex;
+    border-bottom: 1px solid #E1E1E1;
+    min-width: 320px;
+}
+
+.x_search>a{
+    text-align: center;
+    font:14px/14px "PingFang SC" ;
+    margin: 15px auto ;
+    color: #35424B;
+;
+}
+.x_search a:nth-child(1):hover{
+     color:#44b181;
+ }
+.x_search a:nth-child(2):hover{
+    color:#44b181;
+}
+
+.x_search>a:nth-child(1){
+    width: 50%;
+    border-right: 1px solid  #E1E1E1;
+
+
+
+}
+.x_search>a:nth-child(2){
+    width: 50%;
+    border-right: 1px solid  #E1E1E1;
+
+}
+.x_search>a:nth-child(3){
+    margin: 14px;
+    width: 17px;
+    height: 17px;
+    background: url("../images/x_search.png")  17px 17px;
+    background-size: cover;
+}
+main{
+    /*padding:0 10px;*/
+}
+main .x_content{
+    padding: 4px 4px 4px 10px;
+    width: 100%;
+    margin-top: 10px;
+    background-color: whitesmoke;
+}
+main .x_content .x_head{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 25px;
+    background:url("../images/timg.jpg");
+    background-size: 50px  50px ;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+main .x_content h3{
+    font: 14px/20px "PingFang SC";
+    color: #35424B;
+
+}
+main .x_content div span:nth-child(2){
+    font: 12px/20px "PingFang SC", "Microsoft Yahei";
+    color: #999999;
+    display: block;
+    margin-bottom: 5px;
+}
+main .x_content div span:nth-child(3){
+    font: 10px/18px "PingFang SC", "Microsoft Yahei";
+    color: #999999;
+    display: block;
+}
+main .x_content div .x_info i{
+    width: 16px;
+    height: 15px;
+    display: inline-block;
+}
+main .x_content div .x_info i:nth-child(3){
+    background: url("../images/x_sprites.png") no-repeat 0 -50px;
+}
+main .x_content div .x_info i:nth-child(1){
+    background: url("../images/x_sprites.png") no-repeat 0 -12px;
+}
+.x_listen{
+    margin-top: 20px;
+    margin-right: 4px;
+
+}
+.x_listen a{
+    border-radius: 4px;
+    border: 1px solid #44b181;
+    color: #44b181;
+    padding: 2px 2px;
+    font:12px/16px  "PingFang SC"
+}
+
+.x_listen i{
+    width: 15px;
+    height: 15px;
+    background: url("../images/x_sprites.png") no-repeat -20px -100px;
+    margin-left: 4px;
+}

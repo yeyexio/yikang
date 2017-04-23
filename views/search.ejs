@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>易康问答</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/searchNull.css">
+    <script type="text/javascript" src="js/template.js"></script>
+</head>
+<body>
+<!--页面内容-->
+<div class="wrap">
+    <!--顶部-->
+    <header class="header">
+        <!--顶部通用栏-->
+        <div class="currency yk-color">
+            <div class="currency-back">
+                <a href="#" class="fl"><span>&lt;</span>返回</a>
+                <div class="yk fl"><span class="">易康问答</span></div>
+                <div class="more">
+                    <ul class="fr">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--顶部搜索栏-->
+    <div class="top-search">
+        <form action="#" class="clearfix">
+            <input id = "searchContent" type="search" placeholder="搜你感兴趣的人和问题吧！">
+            <input id = "search" type="button" value="搜素">
+        </form>
+    </div>
+
+    <div id="searchcontent">
+        <!--内容区域-->
+        <main id="nullalert" class = "">
+            <img src="../images/searchNull.png" id="imganimation" class = "" alt="">
+            <h4>很遗憾，没有找到</h4>
+            <a href="#">去新晋榜看看</a>
+        </main>
+
+        <!-- 搜索有结果的内容-->
+        <section id="showsearch">
+
+        </section>
+        <!--底部导航栏-->
+        <div class="footer-nav">
+            <ul class='clearfix'>
+                <li class="show"><a href="#"><i></i>榜单</a></li>
+                <li><a href="#"><i></i>收听</a></li>
+                <li><a href="#"><i></i>发现</a></li>
+                <li><a href="#"><i></i>我的</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.12.2.min.js"></script>
+<script src="../js/searchNull.js"></script>
+
+<script type="text/html" id="messageModle">
+    <div class="main-bottom-cont">
+        <div class="headpicSbox fl">
+            <img src={{headpic}} alt="" id="smallhead"/>
+        </div>
+        <div class="messagebox fl">
+            <h3 id="title">{{= title}}</h3>
+            <h5>{{= message  }}</h5>
+            <div class="messageRed"> <span>{{= username }}</span>
+                <span>|{{= profession }}</span></div>
+            <i>{{=time}}</i>
+        </div>
+    </div>
+</script>
+</body>
+</html>

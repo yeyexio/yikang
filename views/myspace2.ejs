@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>我的登录</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/myregist.css">
+    <script src="js/my.js"></script>
+</head>
+<body>
+<!--页面内容-->
+<div class="wrap">
+    <!--顶部-->
+
+    <!--顶部搜索栏-->
+    <div class="top-search"></div>
+    <!--内容区域-->
+    <% if(!login){ %>
+        <div class="head">
+            <div id="headpic"><img src="/head/<%= headpic %>" alt=""/></div>
+            <p>欢迎你,同学</p>
+            <a href="/regist">注册</a>
+            <a href="/login">登录</a>
+        </div>
+    <% }else{ %>
+        <div class="head">
+            <div id="headpic"><img src="/head/<%= headpic %>" alt=""/></div>
+            <% if(havepic) { %>
+            <p>欢迎 <%= username %> </p>
+            <% }else { %>
+            <p>欢迎 <%= username %> </p>
+            <form action="/dohead" method="post" enctype="multipart/form-data">
+                <span>设置头像</span>
+                <input type="file" class="form-control" id="checkpic" name="headpic">
+                <button type="submit" id="lopic"  disabled="disabled">上传</button>
+            </form>
+            <% } %>
+        </div>
+    <% } %>
+        <!--底部导航栏-->
+        <footer class="footer">
+            <div class="footer-nav">
+                <ul class='clearfix'>
+                    <li><a href="#"><i></i>榜单</a></li>
+                    <li><a href="#"><i></i>收听</a></li>
+                    <li><a href="#"><i></i>发现</a></li>
+                    <li><a href="#"><i></i>我的</a></li>
+                </ul>
+            </div>
+        </footer>
+    <script type="text/javascript">
+        window.onload = function () {
+            var checkpic = document.querySelector("#checkpic");
+            var lopic = document.querySelector("#lopic");
+            checkpic.onchange = function () {
+                console.log("文件已经获得");
+                lopic.disabled = false;
+                if (this.files[0].size > 24000) {
+                    alert("图片大小不能超过2MB");
+                    lopic.disabled = true;
+                }
+            }
+        }
+    </script>
+</div>
+</body>
+</html>
